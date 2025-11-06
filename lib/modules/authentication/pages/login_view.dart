@@ -10,7 +10,7 @@ class LoginView extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [Image.asset(AppAssets.appLogoIcon,height: 185,)],
+        children: [Image.asset(AppAssets.appLogoIcon, height: 185)],
       ),
     );
   }
