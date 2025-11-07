@@ -4,8 +4,24 @@ import 'package:flutter/material.dart';
 abstract class AppThemeManager{
 
   static ThemeData lightTheme = ThemeData(
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: ColorPallete.backGroundColor,
     primaryColor: ColorPallete.primary,
+    appBarTheme: AppBarTheme(
+      centerTitle: true,
+      foregroundColor: ColorPallete.primary,
+      backgroundColor: Colors.transparent,
+      titleTextStyle: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
+        color: ColorPallete.primary,
+
+      ),
+    ),
+
+
+
+
+
     textTheme: TextTheme(
       bodyLarge: TextStyle(
         fontSize: 20,

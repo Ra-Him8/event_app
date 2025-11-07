@@ -1,4 +1,5 @@
 import 'package:event2/core/costants/app_assets.dart';
+import 'package:event2/core/routes/page_routes_name.dart';
 import 'package:event2/core/theme/color_pallete.dart';
 import 'package:event2/core/widgets/custom_button.dart';
 import 'package:event2/core/widgets/custom_text_form_field.dart';
@@ -39,7 +40,9 @@ class LoginView extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, PageRoutesName.forgetPasswordVied);
+                },
                 child: Text(
                   "Forget Password?",
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -52,7 +55,7 @@ class LoginView extends StatelessWidget {
               ),
             ),
             CustomButton(
-              child: Text("Login", style: textTheme.bodyLarge),
+              child: Text("Create Account", style: textTheme.bodyLarge),
               onTap: () {},
             ),
             SizedBox(height: 24),
@@ -66,13 +69,18 @@ class LoginView extends StatelessWidget {
                     color: ColorPallete.black,
                   ),
                 ),
-                Text(
-                  " Create Account",
-                  style: textTheme.bodyMedium?.copyWith(
-                    color: ColorPallete.primary,
-                    decoration: TextDecoration.underline,
-                    decorationColor: ColorPallete.primary,
-                    decorationThickness: 1.5,
+                TextButton(
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, PageRoutesName.registerView);
+                  },
+                  child: Text(
+                    " Create Account",
+                    style: textTheme.bodyMedium?.copyWith(
+                      color: ColorPallete.primary,
+                      decoration: TextDecoration.underline,
+                      decorationColor: ColorPallete.primary,
+                      decorationThickness: 1.5,
+                    ),
                   ),
                 ),
               ],
@@ -96,7 +104,7 @@ class LoginView extends StatelessWidget {
             ),
             SizedBox(height: 24),
             CustomButton(
-              backgroundColor: ColorPallete.white,
+              backgroundColor: Colors.transparent,
               onTap: () {},
               child: Row(
                 spacing: 8,
